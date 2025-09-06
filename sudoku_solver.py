@@ -6,11 +6,10 @@ class Board:
     def __init__(self, board):
         self.board = board
 
-    # Print unsolved Sudoku board.
     def __str__(self):
         board_str = ''
         for row in self.board:
-            row_str = [str(i) if i else '*' for i in row] # Replace all input 0s with *
+            row_str = [str(i) if i else '*' for i in row]
             board_str += ' '.join(row_str)
             board_str += '\n'
         return board_str
@@ -72,11 +71,11 @@ class Board:
 
 def solve_sudoku(board):
     gameboard = Board(board)
-    print(f'Puzzle to solve:\n{gameboard}')
+    print(f'Puzzle to solve:\n{gameboard}') # Print unsolved Sudoku puzzle
 
     # If solver() returned True, print the solved puzzle:
     if gameboard.solver():
-        print(f'Solved puzzle:\n{gameboard}')
+        print(f'Solved puzzle:\n{gameboard}') # Print solved Sudoku puzzle
 
     # If solver() returned False, puzzle is unsolvable.
     else:
