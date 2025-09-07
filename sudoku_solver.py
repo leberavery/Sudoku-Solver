@@ -40,8 +40,8 @@ class Board:
         for row_no in range(row_start, row_start + 3):
             for col_no in range(col_start, col_start + 3):
                 if self.board[row_no][col_no] == num:
-                    return False # If digit already exists in 3x3 grid, return True
-        return True # Otherwise, return False
+                    return False # If digit already exists in 3x3 grid, return False
+        return True # Otherwise, return True
 
     def is_valid(self, empty, num):
         row, col = empty
